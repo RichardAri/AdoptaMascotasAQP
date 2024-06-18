@@ -1,0 +1,12 @@
+{% extends 'perros/base.html' %}
+
+{% block content %}
+<div class="main-content">
+    <h2>¿Cómo sería tu mascota ideal?</h2>
+    <form action="{% url 'resultados' %}" method="POST">
+        {% csrf_token %}
+        <textarea name="descripcion" required></textarea><br>
+        <button type="submit">Busca a tu compañero</button>
+    </form>
+</div>
+{% endblock %}

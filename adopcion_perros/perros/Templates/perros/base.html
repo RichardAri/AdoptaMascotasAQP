@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block title %}AdoptaMascotasAQP{% endblock %}</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="{% url 'index' %}">Inicio</a>
+        <button onclick="document.getElementById('modal').style.display='block'">Registra una Mascota</button>
+    </nav>
+    <h1>AdoptaMascotasAQP</h1>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="document.getElementById('modal').style.display='none'">&times;</span>
+            <h2>Registrar una Mascota</h2>
+            <form method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+                Nombre: <input type="text" name="nombre" required><br>
+                Descripción: <textarea name="descripcion" required></textarea><br>
+                Imagen: <input type="file" name="imagen" required><br>
+                Temperamento: <input type="text" name="temperamento"><br>
+                Necesidades Especiales: <input type="text" name="necesidades_especiales"><br>
+                Tamaño: <input type="text" name="tamano"><br>
+                <button type="submit">Registrar</button>
+            </form>
+        </div>
+    </div>
+
+    {% block content %}
+    {% endblock %}
+
+    <script>
+        window.onclick = function(event) {
+            var modal = document.getElementById('modal');
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>

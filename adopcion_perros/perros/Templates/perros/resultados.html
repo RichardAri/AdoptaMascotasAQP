@@ -1,10 +1,10 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Recomendaciones</title>
-</head>
-<body>
-    <h1>Recomendaciones</h1>
+{% extends 'perros/base.html' %}
+
+{% block title %}Resultados - AdoptaMascotasAQP{% endblock %}
+
+{% block content %}
+<div class="resultados-content">
+    <h2>Resultados de la búsqueda</h2>
     <ul>
         {% for perro in perros %}
             <li>
@@ -17,5 +17,5 @@
             </li>
         {% endfor %}
     </ul>
-</body>
-</html>
+</div>
+{% endblock %}

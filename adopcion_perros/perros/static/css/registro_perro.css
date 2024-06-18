@@ -1,0 +1,37 @@
+body{
+    background-color: #222;
+    font-size: 'montserrat';
+}
+
+h1{
+    text-align: center;
+    color: #ffff;
+}
+
+.form {
+  background-color: #ffff;
+  box-shadow: 0 10px 60px rgb(218, 229, 255);
+  border: 1px solid rgb(159, 159, 160);
+  border-radius: 20px;
+  padding: 2rem 0.7rem 0.7rem 0.7rem;
+  text-align: center;
+  font-size: 1.125rem;
+  max-width: 320px;
+  margin: 0 auto;
+}
+
+.form-title {
+  color: #000000;
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+
+.btn-registro {
+  width: 350px;
+  max-width: 100%;
+  color: #444;
+  padding: 2px;
+  background: #fff;
+  border-radius: 10px;
+  border: 1px solid rgba(8, 8, 8, 0.288);
+}
