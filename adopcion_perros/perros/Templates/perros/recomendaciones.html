@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Recomendaciones</title>
+</head>
+<body>
+    <h1>Recomendaciones</h1>
+    <ul>
+        {% for perro in perros %}
+            <li>
+                <img src="{{ perro.imagen.url }}" alt="{{ perro.nombre }}">
+                <p>Nombre: {{ perro.nombre }}</p>
+                <p>Descripción: {{ perro.descripcion }}</p>
+                <p>Temperamento: {{ perro.temperamento }}</p>
+                <p>Necesidades Especiales: {{ perro.necesidades_especiales }}</p>
+                <p>Tamaño: {{ perro.tamano }}</p>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
