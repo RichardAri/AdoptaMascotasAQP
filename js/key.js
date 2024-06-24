@@ -1,3 +1,3 @@
-const clave = (AIzaSyCNA3F7Do6BjagD4nMKD5_sCCBNAX2MxOY)
+const clave = (clavefalsa)
 
 export{clave}
